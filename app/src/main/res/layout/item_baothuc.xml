@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="20dp"
+    app:rippleColor="@color/purple_500"
+    app:strokeColor="@color/purple_200"
+    app:strokeWidth="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="14:30"
+            android:textSize="70dp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/time">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:text="Hằng ngày"
+                android:textSize="20dp"/>
+
+            <View
+                android:layout_width="115dp"
+                android:layout_height="match_parent"
+                />
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/onoff"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:textSize="20dp"
+                android:checked="true" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/baseline_restore_from_trash_24"
+            android:text="Xóa"
+            android:visibility="gone"
+            android:backgroundTint="@color/white"/>
+
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>
